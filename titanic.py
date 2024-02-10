@@ -56,10 +56,11 @@ def inference(sex, age, pclass):
     sex_label = 1
     if sex != "Male":
         sex_level = 0
-    pclass=1
-    age=35
+    #pclass=1
+    #age=35
     input_data = [[pclass, sex_label, age]]
     survival_ratio = model.predict(input_data)[0]
+    st.text(survival_ratio)
     return survival_ratio
 
 
