@@ -2,4 +2,3 @@ pillow
 scikit-learn
 seaborn
 pickle5
-DecisionTreeRegressor
