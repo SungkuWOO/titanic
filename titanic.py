@@ -1,6 +1,5 @@
 import csv
 import pickle
-
 import numpy as np
 import seaborn as sns
 import streamlit as st
@@ -54,7 +53,11 @@ data_load_state.text('Loading model...done!')
 
 
 def inference(sex, age, pclass):
-    sex_label = 1 if sex == "Male" else 0
+    sex_label = 1
+    if sex != "Male":
+        sex_level = 0
+    pclass=1
+    age=35
     input_data = [[pclass, sex_label, age]]
     survival_ratio = model.predict(input_data)[0]
     return survival_ratio
